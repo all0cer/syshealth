@@ -1,5 +1,6 @@
-from hosp import register
+import register
 
-cadastro = register.registro
-print (cadastro)
+cadastro = register.registro()
+for item in cadastro:
+    print (item)
 
