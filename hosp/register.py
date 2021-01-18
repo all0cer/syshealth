@@ -3,6 +3,7 @@ def registro(name="", idade=0, local=""):
                 name = input("Digite seu nome: ")
                 if name.isalpha():
                         name.isalpha() == True
+
                 else:
                         print("Por favor digite um nome válido.(Não deve conter espaços)")
         while True:
@@ -11,6 +12,11 @@ def registro(name="", idade=0, local=""):
                         break
                 except (ValueError, TypeError):
                         print ("Digite apenas números inteiros")
-                        
-        local = str(input("Digite o nome de sua cidade: ")).strip().split()
+        while True:
+                try:
+                        local = input("Digite o nome de sua cidade: ")
+                        if local.isalpha():
+                                break
+                except (ValueError, TypeError):
+                        print("Por favor, digite um local válido.(Não deve conter espaços")
         return name, idade, local
