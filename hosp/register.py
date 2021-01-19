@@ -2,7 +2,7 @@ def registro(name="", idade=0, local=""):
         while name.isalpha() == False:
                 name = input("Digite seu nome: ")
                 if name.isalpha():
-                        name.isalpha() == True
+                        break
 
                 else:
                         print("Por favor digite um nome válido.(Não deve conter espaços)")
