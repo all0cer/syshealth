@@ -20,3 +20,8 @@ def registro(name="", idade=0, local=""):
                 except (ValueError, TypeError):
                         print("Por favor, digite um local válido.(Não deve conter espaços")
         return name, idade, local
+
+
+def historico(historia="",sintomas=""):
+        historia = str(input("Digite o histórico de vida do paciente: "))
+        sintomas = str(input("Digite os sintomas do paciente: "))

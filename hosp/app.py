@@ -7,3 +7,5 @@ for item in cadastro:
     print (f"Idade:{item[1]}")
     print (f"Local:{item[2]}")
 
+cadastro_historico = register.historico()
+
