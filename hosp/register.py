@@ -7,50 +7,31 @@ def registro(
            \nIdade: Idade do paciente
            \nSexo: Sexo do paciente(F/M)"""
         while True:
-                name = input(
-                        "Digite seu nome: "
-                        )
+                name = input( "Digite seu nome: ")
                 if all(
                         l.isspace() or l.isalpha() for l in name
                         ):
                         break
                 else:
-                        print(
-                                f'Por favor digite um nome válido'
-                                )
+                        print(f'Por favor digite um nome válido' )
         while True:
                 try:
                         idade = int(
-                                input(
-                                        "Digite a sua idade: "
-                                        )
+                                input( "Digite a sua idade: ")
                                 )
                         break
                 except (
                         ValueError, TypeError
                         ):
-                        print (
-                                "Digite apenas números inteiros"
-                                )
+                        print ("Digite apenas números inteiros")
         while True: 
-               sexo = input(
-                       "Digite o sexo(F/M): "
-                       ).upper()
-
+               sexo = input( "Digite o sexo(F/M): " ).upper()
                if sexo == 'F':
-
                 break
-
                elif sexo == 'M':
-
                 break        
-
                else:
-
-                       print(
-                               f'Digite F para feminino ou M para masculino'
-                               )   
-
+                       print( f'Digite F para feminino ou M para masculino')   
         return name, idade, sexo
 
 
@@ -66,13 +47,19 @@ def historico(
                         )
                 )
         sintomas = str(
-                input(
-                        "Digite os sintomas do paciente: "
-                        )
+                input( "Digite os sintomas do paciente: " )
                 )
         medicamentos = str(
-                input(
-                        "Digite o medicamento a ser usado e a dosagem: "
-                        )
+                input("Digite o medicamento a ser usado e a dosagem: " )
                 )
+        return historia, sintomas, medicamentos
+
+
+def salvar_arquivo(confirmar_criacao=''):
+        confirmar_criacao = str(input('Deseja salvar o arquivo?(S/N) ')).upper
+        if confirmar_criacao == 'S':
+               ref_arquivo = open('dados1.txt', 'a')
+              
+        
+        
 

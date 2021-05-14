@@ -1,19 +1,16 @@
+
 import register
 
+while True:
+    cadastro = [
+            register.registro()
+            ]
+    historico_paciente = register.historico()
+    break
 
-cadastro = [
-    register.registro()
-    ]
-for item in cadastro:
-    print (
-        f"Nome:{item[0]}"
-        )
-    print (
-        f"Idade:{item[1]}"
-        )
-    print (
-        f"Sexo:{item[2]}"
-        )
+salvar = register.salvar_arquivo()
+    
 
-cadastro_historico = register.historico()
+    
+
 
