@@ -55,10 +55,14 @@ def historico(
         return historia, sintomas, medicamentos
 
 
-def salvar_arquivo(confirmar_criacao=''):
-        confirmar_criacao = str(input('Deseja salvar o arquivo?(S/N) ')).upper
-        if confirmar_criacao == 'S':
-               ref_arquivo = open('dados1.txt', 'a')
+def cria_arquivo(dates, history):
+        try:
+                nome_arquivo = input('Digite o nome do arquivo a ser editado: ')
+                arquivo = open(nome_arquivo, 'r+')
+        except FileNotFoundError:
+                arquivo = open(nome_arquivo, 'w+')
+                arquivo.writelines(f'{dates}\n, {history}\n')
+                arquivo.close()
               
         
         
